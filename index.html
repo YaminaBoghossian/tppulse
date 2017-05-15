@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP PULSE</title>
+    <style>
+        
+        /* Animation css */
+
+        @keyframes vert {
+            0% {
+                background-color: white;
+            }
+
+
+            50% {
+                background-color: green;
+            }
+
+            100% {
+
+                background-color: white;
+            }
+        }
+
+
+        @keyframes rouge {
+            0% {
+                background-color: white;
+            }
+            50% {
+                background-color: red;
+            }
+            100% {
+                background-color: white;
+            }
+        }
+        /* definir les deux classes , full et empty */
+
+        .full {
+            animation-name: vert;
+            animation-duration: 0.2s;
+        }
+
+        .empty {
+            animation-name: rouge;
+            animation-duration: 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Création d'un input text et d'un bouton -->
+
+    <input type='text' id='saisie' />
+    <input type='submit' id='sub' value='Go !' />
+
+    <script>
+        // Selectionner bouton et saisie //
+        let bouton = document.querySelector('#sub');
+        let saisie = document.querySelector('#saisie');
+        // Ajouter event click sur bouton, creer nouvelle classe dans le css qui sapelle .empty//
+        bouton.addEventListener('click', function () {
+            saisie.classList.add('empty');
+
+        });
+    </script>
+</body>
+
+</html>
